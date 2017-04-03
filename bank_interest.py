@@ -6,6 +6,9 @@ def calculate_loan_amount(amount=100000, time=12, rate=12):
     """
     if time < 1:
         return "Time cannot be less than 1."
+    elif amount < 100000:
+        return "Amount cannot be less than 100000."
+    
     new_loan_amt = (amount * (rate/100) * (time/12)) + amount
     return new_loan_amt
 
