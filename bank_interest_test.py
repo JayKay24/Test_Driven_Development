@@ -6,8 +6,8 @@ class testCalculateLoanAmount(unittest.TestCase):
     def test_it_calculates_correct_amount(self):
         self.assertEquals(calculate_loan_amount(), 112000.00)
 
-    def test_months_is_not_less_than_zero(self):
-        self.assertRaises(calculate_loan_amount(time=-1), ValueError)
+    def test_time_is_not_less_than_one(self):
+        self.assertEquals(calculate_loan_amount(time=-1), "Time cannot be less than 1.")
 
 if __name__ == "__main__":
     unittest.main()

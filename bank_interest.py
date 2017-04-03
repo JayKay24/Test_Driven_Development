@@ -4,8 +4,8 @@ def calculate_loan_amount(amount=100000, time=12, rate=12):
     Calculates the value of loan using the values.
     Returns the value of loan as a float.
     """
-    if time < 0:
-        raise ValueError
+    if time < 1:
+        return "Time cannot be less than 1."
     new_loan_amt = (amount * (rate/100) * (time/12)) + amount
     return new_loan_amt
 
